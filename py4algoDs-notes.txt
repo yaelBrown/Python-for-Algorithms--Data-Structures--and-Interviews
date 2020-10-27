@@ -1,0 +1,134 @@
+
+
+o(1) = constant time
+
+Using right data structure is important
+
+Abstract Data Structures - aDS are the specifications
+  stack - (arr, ll)
+  queue - (arr, ll)
+  priority queue - (heap)
+  dictionary/hashmap - (arr)
+
+Data Structures - DS are the concrete implementations
+  Arrays
+  linked lists
+  heap
+
+  using ds in main can reduce the running time of applications
+
+Arrays
+  o(1) - time complexiy
+  Are random access
+  Uses less memory
+  to remove a item you have re-adjust the array. 
+    o(1) + o(n)
+  do not need extra memory (because you dont have to store pointers)
+  insert at the beginning = o(n) runtime
+
+LL 
+  o(n) - time complexity
+  are not random access
+  Are dynamic
+  Use pointers for next item, and previous item
+  Is very fast, adding items is linear time
+    insert items at the beginning
+  To add to the end of the ll you have to traverse to the end of the lists
+    this runs at linear time depending on size of ll O(n)
+
+  Low level memory management
+    when dealing with c - malloc() and free()
+    can manipulate the heap memory
+
+    syslinux.org q?heap management
+
+  alt-tab in windows
+  photoviewer with next image, and previous image
+  blockchain - where blocks are linked cryptographically linked together
+
+  most popular data structure
+  searching is sequential
+
+dLL
+  has a reference to the next node and a reference to the previous node
+
+stack 
+  aDS - usually represented with interface (in java)
+  basic operations: pop(), push(), and peek()
+  LIFO - last in, first out "lee-foo"
+  used with graph algorithms: depth-first search (dfs) /or recursion
+  finding Euler-cycles in a graph
+  finding strongly connected components in a graph
+
+  stack recursion - stacks that are created recursively
+    forget the base case you will cause stack overflow
+
+  applications
+    back button in web browsers
+    edit or undo
+    stack memory stores
+
+  stack memory - most important implementation using the stack datatype
+    call stack is a aDS stores information about the active subroutines/methods/functions of a computer program
+    details are normally hidden in high-level programming languages
+    keeps track of the point to which each active subroutine should return control when it finishes executing
+    stores temp vars created by each func
+    func creates a new var its pushed onto the stack
+    stack memory is limited
+    local variables are removed when the item on the stack is removed. 
+    c and c++ stack memory has to be managed
+
+heap
+  heap memory - region of memory that is not managed automatically for you
+    large region of memory
+    c: malloc() calloc() with pointers
+    java: reference types and objects are on the heap
+    we have to deallocate these memory chunks because they are not managed automatically
+      if not will cause a memory leak
+      thats why java garbage collection came to be
+    runs slower because of pointers
+
+queue
+  aDS (in java its a interface)
+  basic ops: enqueue() and dequeue(), peek()
+  FIFO structure: first in first out
+  impl dynamic array or linked lists
+  important when impl bfs for graphs
+  enqueue adds a item to the first of the queue
+  dequeue remove the first item in the queue
+
+  applications
+    in serveral graph algorithms
+    cpu scheduling
+    data is transferred asynchronously: io buffers
+    android os uses queues a lot
+    operational research applcations or stochastic models rely heavily on queue
+    stacks and queues are fundamental building blocks for operating systems
+
+  better solution would be to use a dLL
+
+Binary Search Trees (bst)
+  bst are data structures
+  bst makes operations fast
+    o(log N) ~ predictable
+    get rid of half the day for every search
+  nodes can only have 2 children
+    left child and right child
+  arrays have to be sorted to be searched
+  height - number of layers it contains
+  height of the tree at the minimum
+    h=log n
+  balanced - when the tree has equal amount of verticies on left and right
+    have better runtime
+  
+  Trees - have nodes (vertex) with the data and connection between the nodes (edges)
+    child - node connected to another node (one level down)
+    leaf nodes - nodes with no children
+
+
+
+#27
+
+
+
+
