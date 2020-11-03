@@ -125,9 +125,42 @@ Binary Search Trees (bst)
     child - node connected to another node (one level down)
     leaf nodes - nodes with no children
 
+  Consider nodes, if smaller goto left, if bigger go right
+
+  logarithmic time complexity for searching. 
+
+  deletiong - (soft) - don't remove the node, just mark that its been removed
+    not so efficient solution
+
+    search, then remove
+    when you remove a node, remove the pointer from the parent
+      O(logN) + O(1)
+
+    when removing root node you have to find the predecessor in left subtree
+      predecessor - highest node in the left subtree
+      successor - lowest node in the right subtree
+
+      swap the root node with predecessor (or the node with no children out of predecessor or successor)
+
+      O(logN)
+
+  Traversal 
+    in-order traversal - visit the left subtree  + root + right subtree recursively (in order)
+    pre-order traversal - root + left subtree + right subtree
+    post-order traversal - left subtree + right subtree + root
+ 
+  Running times
+    Space 
+      avg - O(n)
+      wst - o(n)
+    Insert, Delete, Search
+      avg - o(log n)
+      wst - o(n)
+
+  Implementing
+    Node class {data, leftChild, rightChild, parent}
 
 
-#27
 
 
 
