@@ -128,6 +128,8 @@ Binary Search Trees (bst)
   Consider nodes, if smaller goto left, if bigger go right
 
   logarithmic time complexity for searching. 
+  logarithmic time for insertion if the tree is balanced. 
+    if unbalanced it is linear time
 
   deletiong - (soft) - don't remove the node, just mark that its been removed
     not so efficient solution
@@ -160,6 +162,42 @@ Binary Search Trees (bst)
   Implementing
     Node class {data, leftChild, rightChild, parent}
 
+  Applications
+    Operating systems
+      directories are represented in trees
+      windows: 'tree' in cmd prompt
+    game trees (chess and tic-tac-toe)
+    machine learning - decision trees and boosting
+
+Balanced Binary Trees (AVL)
+  Running time of bst depends on the height of the binary search tree. 
+  1962 invented by two russian computer scientist
+  avl trees are faster than red-black trees because thy are more rigidly balanced but needs more work
+  os's rely heavily on these data structures
+  operations are the same
+  every insertion have to check if tree is balanced or not
+  delete/max/min operations are the same
+
+  AVL tree or Red-Black tree
+    o(logN) is guaranteed
+
+  Construct a binary tree from a sorted array, ends up being a linked list
+    o(logN) reduced to o(n)
+
+  rotating a tree - is the action of making a tree balanced 
+    [impl is confusing]
+
+    doublely left heavy/right heavy
+
+    To rotate right - just update the references
+      have to create a tempNode
+
+    if difference between 2 sub-nodes their value (when counting height) does not exceed 1, they are considered balanced. 
+      [see photo avl-balanced-subtree.png]
+
+  Insert - o(n*logN)
+  In-Order traversal - o(n)
+  Overall complexity - o(n*logN)
 
 
 
@@ -181,8 +219,6 @@ Binary Search Trees (bst)
 
 
 
-
-
-#31
+#41 1:26
 
 
