@@ -199,6 +199,42 @@ Balanced Binary Trees (AVL)
   In-Order traversal - o(n)
   Overall complexity - o(n*logN)
 
+  QuickSort out performs AVL sort because QuickSort does not use additional memory. 
+    Running time will be the same for all of them.
+
+  Applications
+    Databases - when deletions or insertions are not so frequent, but have to make a lot of look-ups
+    Look-up Tables - impl w/hashtables, AVL trees support more ops in the main
+    Can sort with help of AVL trees
+    Red-Black trees are a bit more popular - AVL trees require more rotations (slower)
+
+  Impl
+    You have deal with height parameter. 
+    Leaf nodes height is 0 (their left or right node are -1) 
+      Going up to root they increase by 1
+
+    Have to update the childs, parents, and heights (in that order)
+
+Red-Black Trees
+  Solves same problem as AVL trees
+  Running time of BST depends on the height of BST. 
+  AVL trees are faster than red-black trees, because they are rigidly balanced
+  OS require heavily on these data structures
+
+  Each node is either red or black
+    Root is always black
+    child missing = NILL or NULL (and they are block)
+
+    Every red node must have 2 black children (NIL counts as children)
+      Also a black parent
+
+  Rotations are exactly the same
+  Every new node will be Red by default
+  Violate the RB properties we have to rebalance the tree:
+    Make rotations
+    Update the colors
+
+  Purpose of coloring the nodes is to ensure that you end up with a balanced tree. 
 
 
 
@@ -208,17 +244,6 @@ Balanced Binary Trees (AVL)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-#41 1:26
+#48 1:07
 
 
