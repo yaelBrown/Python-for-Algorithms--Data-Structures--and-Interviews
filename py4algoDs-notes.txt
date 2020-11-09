@@ -1,3 +1,5 @@
+
+
 o(1) = constant time
 
 Using right data structure is important
@@ -256,5 +258,7 @@ Red-Black Trees
     Constructor default for node is Color=Color.RED
     Need a isViolated or violate function
       Used to start recolor or rotate nodes
-      
-  #58
+
+
+
+#58
