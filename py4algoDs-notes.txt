@@ -1,8 +1,6 @@
-
-
 o(1) = constant time
 
-Using right data structure is important
+Using the right data structure is important
 
 Abstract Data Structures - aDS are the specifications
   stack - (arr, ll)
@@ -17,6 +15,7 @@ Data Structures - DS are the concrete implementations
 
   using ds in main can reduce the running time of applications
 
+
 Arrays
   o(1) - time complexiy
   Are random access
@@ -25,6 +24,7 @@ Arrays
     o(1) + o(n)
   do not need extra memory (because you dont have to store pointers)
   insert at the beginning = o(n) runtime
+
 
 LL 
   o(n) - time complexity
@@ -49,8 +49,10 @@ LL
   most popular data structure
   searching is sequential
 
+
 dLL
   has a reference to the next node and a reference to the previous node
+
 
 stack 
   aDS - usually represented with interface (in java)
@@ -78,6 +80,7 @@ stack
     local variables are removed when the item on the stack is removed. 
     c and c++ stack memory has to be managed
 
+
 heap
   heap memory - region of memory that is not managed automatically for you
     large region of memory
@@ -87,6 +90,7 @@ heap
       if not will cause a memory leak
       thats why java garbage collection came to be
     runs slower because of pointers
+
 
 queue
   aDS (in java its a interface)
@@ -106,6 +110,7 @@ queue
     stacks and queues are fundamental building blocks for operating systems
 
   better solution would be to use a dLL
+
 
 Binary Search Trees (bst)
   bst are data structures
@@ -169,10 +174,12 @@ Binary Search Trees (bst)
     game trees (chess and tic-tac-toe)
     machine learning - decision trees and boosting
 
+
 Balanced Binary Trees (AVL)
   Running time of bst depends on the height of the binary search tree. 
   1962 invented by two russian computer scientist
   avl trees are faster than red-black trees because thy are more rigidly balanced but needs more work
+    AVL trees are better for search operations
   os's rely heavily on these data structures
   operations are the same
   every insertion have to check if tree is balanced or not
@@ -217,11 +224,13 @@ Balanced Binary Trees (AVL)
 
     Have to update the childs, parents, and heights (in that order)
 
+
 Red-Black Trees
   Solves same problem as AVL trees
   Running time of BST depends on the height of BST. 
   AVL trees are faster than red-black trees, because they are rigidly balanced
   OS require heavily on these data structures
+  RBT are not rigidly balanced, so they dont have to be rebalanced all of the time
 
   Each node is either red or black
     Root is always black
@@ -260,5 +269,104 @@ Red-Black Trees
       Used to start recolor or rotate nodes
 
 
+Priority queues
+  Abstract datatype - typically created with 1 dimensional array
+  Priorities are usually impl with heaps or self-balancing trees
+  No FIFO structure
 
-#58
+  Has a priority value
+
+  concept naturally suggest a sorting algorithm
+
+  Heap Basics
+    Basically a binary tree.
+      abstract data type - because underlying datastructure could be an 1 dimensional array
+    2 heap types min and max heap
+    
+    dijkstras algo, prims algo
+
+    Priority queues are impl w/heaps 
+
+    heap properties are complete. 
+      construct heap from left to right across each row
+    binary heap every node can have 2 children, lc rc
+      does not matter if lc is less than or greater than rc (different from bst's)
+      order does not matter
+
+    min heap - parent is always smaller than the values of the children
+    max heap - parent is always greater
+
+    root - will be the smallest/greatest value in the heap
+
+    1d arr representation
+      i = parent node
+      2i+1 = left node
+      2i+2 = right node
+
+    heapify process
+      o(n) to construct the heap
+      o(logN) + o(n) + o(logN) = o(N) - reconstruct the heap if properties are isViolated
+      inserting item to heap is just adding data to the array and incrementing the index
+
+      violated = when one of the child nodes are greater than root in max heap or smaller than root in min heap
+
+    deleting item o(n) + o(logN) = o(n)
+      has ti search and find the item, then reconstruct the ds
+
+  HeapSort
+    comparison-based sorting algorithm
+    uses heap data structure
+    in place algo, does not need additional memory
+    running time to sort o(n*logN) 
+      Similar running time for merge sort/quick sort
+
+  Binomial Heap
+    similar to binary heap but supports quick merging of two heaps
+    impl of mergeable heap aDS (meldable heap)
+    priority queue + supporting merge operational
+    impl as collection of tree
+    insertion o(logN) can be reduced to o(1)
+
+  Fibonacci Heap 
+    Faster than classic binary heap
+    Dijkstra sortest path algo, and prims spanning tree algo run faster if they rely on fib. heap 
+    can have serveral children
+      number of children are kept low
+    can achieve o(1) for operations instead of o(logN)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#69
+
+
+
+
