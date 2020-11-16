@@ -282,6 +282,7 @@ Priority queues
     Basically a binary tree.
       abstract data type - because underlying datastructure could be an 1 dimensional array
     2 heap types min and max heap
+    use heaps when you want smallest (or max) at o(1) complexity because it is always the root node
     
     dijkstras algo, prims algo
 
@@ -310,6 +311,9 @@ Priority queues
 
       violated = when one of the child nodes are greater than root in max heap or smaller than root in min heap
 
+      from heapq import heappop, heappush, heapify
+        package that contains heap operations
+
     deleting item o(n) + o(logN) = o(n)
       has ti search and find the item, then reconstruct the ds
 
@@ -335,6 +339,46 @@ Priority queues
     can achieve o(1) for operations instead of o(logN)
 
 
+Associative Arrays (has maps, maps)
+  Associative arrays/maps/dictionaries are aDS
+  k/v pairs, where each key appears once. 
+  aim is to reach o(1) time complexity for most of the operations
+  impl w/ hashtables but binary search trees can be used
+
+  supports add/remove/update/lookup operations
+
+  does not support sorting operations
+  no order defined in these k/v pairs
+
+  HashTables/dictionaries
+    Collisions are when keys are mapped to the same index within a bucket. 
+      open addressing (better solution) - creates a new space in bucket for the key
+      chaining - multiple entries into the same slot with the help of a linked list
+
+      linear probing - try next slot if collision appears
+      quadratic probing - try slots 1,2,4,8,... units far always
+      rehashing - hash the result again in order to find an empty slot
+
+      finding space is o(n)
+
+    Dynamic Resizing 
+      performance depends on load factor: number entries to number of buckets ratio. 
+      space-time tradeoff - resize the table when its load factor exceeds given threshold
+
+      Java - load factor is greater than 0.75 hashmap will automatically be resized
+      Python - load factor is greater than 0.66 (2/3) it will automatically be resized. 
+        Resizing takes o(n) time to complete
+        may make dynamic-sized hash tables inappropriate for real-time applications
+
+    Appl
+      Databases (sometimes search trees, hashing is better)
+      counting given word occurence in a particular document
+      storing data + lookup tables (password checks)
+      lookup tables in huge networks (lookup for ip addresses)
+        (routing tables?)
+      Rabin-karp algo for substring search
+
+    Why use prime numbers in hashing? - http://www.globalsoftwaresupport.com/use-prime-numbers-hash-functions/
 
 
 
@@ -364,9 +408,5 @@ Priority queues
 
 
 
-
-#69
-
-
-
+#76
 
