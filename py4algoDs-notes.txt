@@ -361,6 +361,10 @@ Associative Arrays (has maps, maps)
 
       finding space is o(n)
 
+      Underlying datastructure for ht/dict is Arrays
+
+      They do not support sorting
+
     Dynamic Resizing 
       performance depends on load factor: number entries to number of buckets ratio. 
       space-time tradeoff - resize the table when its load factor exceeds given threshold
@@ -380,6 +384,122 @@ Associative Arrays (has maps, maps)
 
     Why use prime numbers in hashing? - http://www.globalsoftwaresupport.com/use-prime-numbers-hash-functions/
 
+    probing is when you try to create a key in the batch array slot. 
+      hashfunction() - creates a random number for index in batch array to store key. Then eventually store the value
+
+    Hashing Appl
+      saving password string into Databases
+      blockchain sha-256 hashes - hashes identify the block.
+        blockchains are linkedlist
+        if one block is changed the hash is changed. 
+      bitcoin
+
+    
+Ternary Search Trees / tries
+  tries allow you search sort things efficiently
+  consume a lot of memory
+  better to use tst - which stores less references and null objects
+  tst - stores characters or strings in nodes
+  each node has 3 children
+    left - less
+    middle - equal
+    right - greater
+    tries can have as many children as the alphabet
+  can balance tsts-s with rotations but not worth it
+  can be used instead of hashmap but not as efficient as hashing
+    hashing needs to examine the entire key, TST does not
+
+  tst is better than hashing, and supports sorting
+
+  put() - insertion method
+  tst is better than hashtables
+    lzw data compression
+  tst are more efficient and memory friendly because it does not have as many children as tries
+
+  can combime tst with t (tst+t)
+
+  tst works only for strings
+  only examines just enough key characters 
+  search miss may only involve a few characters
+  support more ops (sorting)
+  faster than hashing and more flexible than bst
+
+  hashing needs to examine entire key
+  search hits and misses cost the same
+  rt and perf relies heavily on the hashfunction
+  does not support as many ops as tst (hashing)
+
+  Appl
+    auto-complete feature
+    used for spell checkers
+    near neighbor searching
+    dbs especially when indexing by serveral non-key fields is desirable
+    package routing
+    prefix matching - google search
+      google relies heavily on tst
+      can use dfs (depth-first search)
+
+
+Graph Theory
+  verticies == nodes
+  edges == paths 
+
+  undirection graphs (ug) - edges are bidirectional
+    edges may have weights
+  directed graphs (dg) - edges have direction
+    edges may have weights as well. 
+
+  tree - ug - any two verticies are connected by exactly one path
+  forest - dg - disjoint union of trees. (in one graph the graph has multiple graphs)
+  directed acyclic graph - dag - finite directed graph with no directed cycles
+    with no directed cycles
+    crucial in many algorithms
+
+  complete graph - when every pair of verticies are connected
+
+  How to represent
+    adjacency list - an array that has all the connections and routes of that node
+      good - iterating over all the edges is efficient
+      bad - edge weight lookup is slow because it is in o(n) (linear time)
+    adjacency matrix - a matrix (2d array) that holds the edge weights/paths
+      bad - as many rows and columns as verticies in the graph
+        iterating over all the edges takes o(e^2)
+      good - space efficient with dense graphs but requires o(v^2) memory
+        edge weight lookup is o(1)
+
+      undirected graphs have symmetric adjacency matrix representations
+
+  appl
+    sortest path algos (google maps, waze)
+      dijkstra shortest path algo - find the shortest path between two locations quite fast
+      arbitrage opportunities on the FOREX - dected with help from Bellman-Ford algo, detecting negative cycles
+      shortest path algo used in photo editing softwares (photoshop, gimp)
+      open shortest path first (OSPF) - routing protocol
+      graph traversal algo (breath-first search) can traverse huge networks such as WWW
+        googles Spider crawls the web and keeps indexing the web pages (page rank calculation)
+      job scheduling algo
+      maven or gradle use graph algo to prevent the problem of cycles in a graph and (dags)
+      quadratic optimization problems
+        maximum flow problem (max flow min cut problem)
+        circulation problem and airline scheduling
+        vehicle routing problem
+      strongly connected components
+        recommendation systems (youtube related videos) (youtube currently uses mesh learning)
+        analyze ecosystems
+
+Graph Traversal Algo
+  breadth-first search (bfs)
+    we want to visit every node 
+    visit every vertex exactly once 
+    visit neighbors then the neighbors of these new verticies
+    running time complexity: o(v+e)
+    memory complexity is not good - have to store a lot of references
+    dfs is usually preferred
+    constructs shortest path
+      dijkstra algo does bfs if all the edge weights are == 1
+
+
+      
 
 
 
@@ -401,12 +521,4 @@ Associative Arrays (has maps, maps)
 
 
 
-
-
-
-
-
-
-
-#76
-
+#91
