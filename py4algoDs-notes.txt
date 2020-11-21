@@ -488,6 +488,10 @@ Graph Theory
         analyze ecosystems
 
 Graph Traversal Algo
+  BFS is usually implemented with a queue aDS
+  DFS is usually implemented with a stack. But usually implemented with recursion
+    call it recurisively the os will use a stack no matter what
+  
   breadth-first search (bfs)
     we want to visit every node 
     visit every vertex exactly once 
@@ -498,9 +502,34 @@ Graph Traversal Algo
     constructs shortest path
       dijkstra algo does bfs if all the edge weights are == 1
 
+    going to visit every node row by row
+    not very memory friendly
+    have to store a lot in queue datatype
 
-      
+    appl
+      ai/ml - robots can discover the surrounding more easily with bfs than dfs
+      maximum flow - edmonds-karp algo uses bfs for finding augmenting paths
+      garbage collection - cheyens algo, help maintain active references in heap memory
+        usues bfs to detect all the references on the heap 
+      serialization/deserialization of a tree - (when order does not matter) - allows the tree to be reconstructed in a efficient manner
 
+  Depth-First Search (dfs)
+    widely used traversal algoinvest
+    investigated as a strategy for solving mazes by Tremaux in 19th century (what?)
+    goes deep as possible in each branch before back tracking
+    running time complexity: o(v+e)
+    memory complexity: little bit better than bfs
+
+    can use recursion or iteration
+      have to use stack aDS
+      iter/recur are the same
+
+    appl
+      topological ordering
+      kosaraju algo - finding strongly connecting components
+        used in recommendation systems
+      detecting cycles - if a graph is DAG or not
+      generating or finding a way out of a maze.
 
 
 
