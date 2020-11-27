@@ -488,8 +488,8 @@ Graph Theory
         analyze ecosystems
 
 Graph Traversal Algo
-  BFS is usually implemented with a queue aDS
-  DFS is usually implemented with a stack. But usually implemented with recursion
+  BFS is usually implemented with a queue aDS*** interview question "What is main difference between dfs and bfs"
+  DFS is usually implemented with a stack. But usually implemented with recursion*** interview question "What is main difference between dfs and bfs"
     call it recurisively the os will use a stack no matter what
   
   breadth-first search (bfs)
@@ -531,23 +531,25 @@ Graph Traversal Algo
       detecting cycles - if a graph is DAG or not
       generating or finding a way out of a maze.
 
+  Memory management
+    using queue o(n)
+    dfs saving memory is o(logN)
 
+    dfs: o(logN)
+    bfs: o(n)
 
+    dfs is preferred because of its memory complexity
+    bfs is preferred sometimes but for ai/ml algo's
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#91
+  Shortest Path (sp)
+    sp prob - finding a path between two verticies in a graph such that sum of the weights of its edges is minimized
+      dijkstra algo
+      bellman-ford
+      a* search
+      floyd-warshall algo
+    
+    dijkstra algo - O(v*logV+e)
+      it is a greedy algo
+      fast
+      
+    
