@@ -552,4 +552,55 @@ Graph Traversal Algo
       it is a greedy algo
       fast
       
+    bellmanFord algo
+      invented in 1958
+      slower than dijkstra's but more robust
+      can handle negative weights
+      relaxes all edges at the same time for v-1 iteration
+      o(v*e)
+      does v-1 iteration + 1 to detect cycles, if cost decreases in the v-th iteration than there is a negative cycle. 
+      
+    Yen Algorithm
+      Bellman-Ford algo with some optimization
+      can terminate the algo if there is no change in the distances between two iterations
+        we use same technique in bubble sort
+      
+    Appl
+      FOREX market, it can detect arbitrage situations
+        arbitrage situations are mispricing
+      Solving the knapsack-problem
+      GPS
+      RIP - Routing information Protocol
+      DAG = Directed Acyclic Graph
+      Avidan-Shamir Method - When you want to shrink a image in the browser or on a smartphone without distortion
+        Have to eliminate the least significant bit strings
+        energy function and remove the connected string of pixels containing the least energy
+        Photoshop and Gimp use it
+        Build a huge graph: verticies are pixels, edges are pointinf from every vertex to its downward 3 neighbors
+        energy function determines what the edge weights will be
+        its acyclic - can use topological order sp to find the string of pixels to be removed
+      Longest Path problem
+        NP-Hard problem, no polynomial time algorithm
+        Negate edge weights
+        have to use Bellman-Ford
+      CPM - Critical path method
+        a form of longest path problem
+        first used in 1940-1943 in the Manhattan project
+        
+        
+  Spanning Trees
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #107
+      
+      
+      
     
