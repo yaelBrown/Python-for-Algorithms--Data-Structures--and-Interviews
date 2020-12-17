@@ -588,19 +588,38 @@ Graph Traversal Algo
         first used in 1940-1943 in the Manhattan project
         
         
-  Spanning Trees
+  Spanning Trees (ST)
+    To impl - (Kruskal's algo)
+      Vertex class
+      Node class
+      Edge class
+      DisjointSet class
+      KruskalAlgo class
   
+    pathCompression
   
-  
-  
-  
-  
-  
-  
-  
-  
-  #107
+  Prim-Jarnik Algo (PJA)
+    Kruskal is a edge based algo
+      built the ST serpate
+      Performs better with sparse graphs, uses simpler data structures
+      can have better performance if the edges can be sorted in linear time or the edges are already sorted.
+    PJA is a vertex based algo
+      build ST from given vertex adding the smallest edge tothe MST
+      Significantly faster in the limit when you have really dense graph, with more edges than verticies
+      better if the number of edges to vertices is high
       
+    
+    
+  
+  
+  
+  
+  
+  
+  #113
+ 
+ 
+ laptop is running slow
       
       
     
