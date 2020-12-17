@@ -589,6 +589,11 @@ Graph Traversal Algo
         
         
   Spanning Trees (ST)
+    G(V,E) graph is a subgraph that includes all the vertexes of the G(V,E) graph
+    A tree may have many spanning trees
+    
+    Use union find data structure - there will be no cycles int he spanning tree in O(logV) running time
+    
     To impl - (Kruskal's algo)
       Vertex class
       Node class
@@ -602,14 +607,51 @@ Graph Traversal Algo
     Kruskal is a edge based algo
       built the ST serpate
       Performs better with sparse graphs, uses simpler data structures
+      Have to sort the edges first
       can have better performance if the edges can be sorted in linear time or the edges are already sorted.
     PJA is a vertex based algo
       build ST from given vertex adding the smallest edge tothe MST
       Significantly faster in the limit when you have really dense graph, with more edges than verticies
       better if the number of edges to vertices is high
+      Uses Heap as underlying data structure
       
+    impl
+      Vertex class
+      Edge class
+      
+  MST
+    Optimization problems
     
     
+    
+Sorting Algorithms
+  puts elements of an array ina. certain order
+  nums = numerical ordering
+  str/char = alphabetical ordering
+  
+  Comparison based algos
+    bubble sort
+    insertion sort
+    selection sort
+    merge sort
+    quicksort
+    
+  non-comparison based sorting algos
+    radix sort
+    bucket sort
+  
+  o(n^2) or (o(n log n) or o(n)
+  
+  in place - o(1) beyond the items being sorted
+    does not need any extra memory
+  recursive - impl with recursive manner - divide and conquer algos
+    merge sort
+    quicksort
+  stable - maintain the relative order of records with equal values
+  not-stable - ? 
+    quicksort
+    
+  
   
   
   
