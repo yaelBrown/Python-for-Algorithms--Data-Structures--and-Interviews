@@ -668,7 +668,7 @@ Sorting Algorithms
           may run in o(n)
         Polygon filling algo
       
-    SelectionSort
+    SelectionSort - (You keep looking for the lowest number and swap it with index)
       in place algo
       simple and has performance advantages
       useful where aux mem is limited
@@ -676,6 +676,45 @@ Sorting Algorithms
         sub array of items already sorted
         sub array of items remating to be sorted
       always outperforms bubblesort
+      
+    InsertionSort - (lots of shifting)
+      in-place algo
+      it is an online algo - it can sort an array as it receives it for example, downloading data from teh web
+      hybrid algo uses insertion sort if the sub arr is small enough
+        faster for small sub arrs than quicksort
+      variant is shell sort
+      selection sort is very similar
+      insertion sort will write to the arr o(n^2) times
+      selection will write only o(n) times
+
+      selection sort may be preferable in cases where writing to memory is significantly more expensive than reading
+        for example: flash memory
+        
+    QuickSort - 
+      efficient algo
+      in place algo
+      average case o(n logN)
+      worst case quadatic o(n^2)
+      created by Tony Hoare in 1959. Same person who invented quickselect algo
+      well impl quicksort can outperform heapsort and mergesort
+      comparison based algo
+        not faster than linearithmic time complexity
+      Widely used in programming languages
+        primitive types - quicksort
+        reference types/objects - mergesort
+          (reference types is a type of variable where it is stored in a heap by reference and refers to a value in memory) 
+          (value types is when the variable is stored with a value instead of reference to information in memory)
+      divide and conquor algo
+      arrs with size of zero or one never need to be sorted 
+      
+    MergeSort - 
+      divide and conquer algo
+      invented by John Von Neumann in 1945
+      comparison based algo
+      stable sorting algo
+      not in-place algo
+      o(1) aux space instead of merge sorts o(n)
+      o(N logN) running time
       
   
   
@@ -719,4 +758,4 @@ Sorting Algorithms
   
   
   
-  #118
+  #129
