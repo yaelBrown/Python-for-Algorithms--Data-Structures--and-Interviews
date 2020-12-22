@@ -652,6 +652,71 @@ Sorting Algorithms
     quicksort
     
   
+  Adaptive Algos
+    algo that changes its behavior based on informationavailable at runtime
+    adaptive sort - can take advantage of exisiting order in its input
+    benefits from local orders
+    most of the time you have to modify exisiting sorting algorithms in order to end up with an adaptive one
+    
+    BubbleSort 
+      very slow and impractical
+      O(n^2) worst and average case scenario 
+      Stable Sorting Algorithm
+      
+      appl 
+        computer graphics - for its capability to detect very small error (swap 2 eles) in almost sorted arrays and fix it
+          may run in o(n)
+        Polygon filling algo
+      
+    SelectionSort
+      in place algo
+      simple and has performance advantages
+      useful where aux mem is limited
+      divides list into 2 parts
+        sub array of items already sorted
+        sub array of items remating to be sorted
+      always outperforms bubblesort
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   #118
